@@ -95,7 +95,11 @@ const LoginPage = () => {
 
           {/* Social Login Buttons */}
           <div className="flex justify-center gap-4 mt-4">
-            <button className="flex items-center justify-center w-12 h-12 bg-gray-100 rounded-full shadow-md hover:bg-gray-200">
+            <button
+              onClick={() => signIn("google", {
+                callbackUrl: "http://localhost:3000/dashboard"
+              })}
+              className="flex items-center justify-center w-12 h-12 bg-gray-100 rounded-full shadow-md hover:bg-gray-200">
               <Image
                 src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-webinar-optimizing-for-success-google-business-webinar-13.png"
                 width={30}
@@ -104,9 +108,9 @@ const LoginPage = () => {
               />
             </button>
             <button
-            onClick={()=>signIn("github",{
-              callbackUrl:"http://localhost:3000/dashboard"
-            })}
+              onClick={() => signIn("github", {
+                callbackUrl: "http://localhost:3000/dashboard"
+              })}
               className="flex items-center justify-center w-12 h-12 bg-gray-100 rounded-full shadow-md hover:bg-gray-200">
               <Image
                 src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
