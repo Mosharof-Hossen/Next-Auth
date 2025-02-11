@@ -13,7 +13,7 @@ const DashboardPage = async () => {
           <h1 className="text-4xl text-center mt-10">Welcome To {session?.user?.name}</h1>
           <h1 className="text-2xl text-center mt-10">Welcome To {session?.user?.email}</h1>
           <Image
-            src={session?.user?.image}
+            src={session?.user?.image || ""}
             alt="User image"
             width={100}
             height={100}
